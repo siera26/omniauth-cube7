@@ -4,7 +4,7 @@ module OmniAuth
   module Strategies
     class Cube7 < OmniAuth::Strategies::OAuth2
       # change the class name and the :name option to match your application name
-      option :cube7
+      option :name, :cube7
 
       option :client_options, {
         :site => "http://localhost:3000", # "http://www.cube7.com"
