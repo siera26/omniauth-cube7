@@ -7,7 +7,7 @@ module OmniAuth
       option :name, :cube7
 
       option :client_options, {
-        :site => "http://localhost:3000", # "http://www.cube7.com"
+        :site => "http://www.cube7.com",
         :authorize_url => "/oauth/authorize"
       }
 
@@ -23,7 +23,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/api/me.json').parsed
+        @raw_info ||= access_token.get('/api/me.json').parsed["account_omniauth"]
       end
     end
   end
