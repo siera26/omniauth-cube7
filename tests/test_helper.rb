@@ -1,9 +1,9 @@
 require 'bundler/setup'
-require "minitest/unit"
-require "minitest/autorun"
+require 'minitest/autorun'
+require 'minitest/unit'
+require 'minitest/rg'
 require 'mocha/setup'
 require 'omniauth/strategies/cube7'
-require "minitest/rg"
 
 OmniAuth.config.test_mode = true
 
