@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/siera26/omniauth-cube7.png?branch=master)](https://travis-ci.org/siera26/omniauth-cube7)
 # Omniauth::Cube7
 
 TODO: Write a gem description
