@@ -62,7 +62,17 @@ An example auth hash available in `request.env['omniauth.auth']`:
     "expires_at"=>1391245607,
     "expires"=>true
   },
-  "extra"=>{}
+  "extra"=>{
+    "raw_info"=>
+    {
+      "id"=>11,
+      "email"=>"ab@sevendevs.de",
+      "gender"=>"Male",
+      "first_name"=>"Alexander",
+      "second_name"=>"Bierbrauer",
+      "baio_status"=>1
+    }
+  }
 }
 ```
 
