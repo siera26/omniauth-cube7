@@ -1,3 +1,4 @@
+require "omniauth/cube7/configuration"
 require 'omniauth/strategies/oauth2'
 
 module OmniAuth
@@ -5,11 +6,6 @@ module OmniAuth
     class Cube7 < OmniAuth::Strategies::OAuth2
       # change the class name and the :name option to match your application name
       option :name, :cube7
-
-      option :client_options, {
-        :site => "http://www.cube7.com",
-        :authorize_url => "/oauth/authorize"
-      }
 
       uid { raw_info["id"] }
 
@@ -24,6 +20,10 @@ module OmniAuth
 
       extra do
         { :raw_info => raw_info }
+      end
+
+      def client
+        ::OAuth2::Client.new(options.client_id, options.client_secret, deep_symbolize(Omniauth::Cube7.configuration.client_options))
       end
 
       def raw_info
