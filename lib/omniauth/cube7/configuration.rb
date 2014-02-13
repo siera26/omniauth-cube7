@@ -33,7 +33,10 @@ module Omniauth
       end
 
       def client_options
-        { site: self.site, authorize_url: self.authorize_url }
+        {
+          :site => self.site,
+          :authorize_url => self.authorize_url
+        }
       end
 
     end

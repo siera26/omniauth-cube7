@@ -9,7 +9,7 @@ end
 
 class ClientTest < StrategyTestCase
   test 'has correct Cube7 site' do
-    assert_equal 'http://www.cube7.com', strategy.client.site
+    assert_equal 'http://cube7-test.com', strategy.client.site
   end
 
   test 'has correct authorize url' do
