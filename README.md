@@ -39,6 +39,17 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+or
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :cube7, "APPLICATION_ID", "SECRET_KEY", {
+    site: 'http://cube7.com',
+    authorize_url: '/oauth/authorize',
+  }
+end
+```
+
 Replace APPLICATION_ID and SECRET_KEY with the appropriate values you obtained from administrator earlier.
 
 ## Authentication Hash
@@ -54,7 +65,8 @@ An example auth hash available in `request.env['omniauth.auth']`:
     "email"=>"ab@sevendevs.de",
     "first_name"=>"Alexander",
     "last_name"=>"Bierbrauer",
-    "baio_status"=>1
+    "baio_status"=>1,
+    "promo_code"=>123,
   },
   "credentials"=>
   {
@@ -70,7 +82,8 @@ An example auth hash available in `request.env['omniauth.auth']`:
       "gender"=>"Male",
       "first_name"=>"Alexander",
       "second_name"=>"Bierbrauer",
-      "baio_status"=>1
+      "baio_status"=>1,
+      "promo_code"=>123,
     }
   }
 }

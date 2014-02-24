@@ -11,10 +11,11 @@ module OmniAuth
 
       info do
         {
-          :email => raw_info["email"],
-          :first_name => raw_info["first_name"],
-          :last_name => raw_info["second_name"],
-          :baio_status => raw_info["baio_status"],
+          :email        => raw_info["email"],
+          :first_name   => raw_info["first_name"],
+          :last_name    => raw_info["second_name"],
+          :baio_status  => raw_info["baio_status"],
+          :promo_code   => raw_info["promo_code"],
         }
       end
 
