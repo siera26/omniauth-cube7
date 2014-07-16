@@ -8,8 +8,8 @@ class StrategyTest < StrategyTestCase
 end
 
 class ClientTest < StrategyTestCase
-  test 'has correct Cube7 site' do
-    assert_equal 'http://cube7-test.com', strategy.client.site
+  test 'has correct baio site' do
+    assert_equal 'https://www.cube7.com', strategy.client.site
   end
 
   test 'has correct authorize url' do
