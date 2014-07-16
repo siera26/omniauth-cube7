@@ -43,7 +43,7 @@ or
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :cube7, "APPLICATION_ID", "SECRET_KEY", {
+  provider :cube7, "APPLICATION_ID", "SECRET_KEY", client_options: {
     site: 'http://cube7.com',
     authorize_url: '/oauth/authorize',
   }
